@@ -30,6 +30,20 @@ void evenodd() {
     }
     
 }
+void logint() {
+    double A, ans;
+    char B;
+
+    printf("Enter a number to calculate its natural logarithm(base = e) \n");
+    gets(&B);
+    scanf("%lf", &A);
+    
+
+    ans = log(A);
+
+    printf("Natural log of %.20f = %lf\n", A, ans);
+
+}
 
 int main(){
     
@@ -38,6 +52,7 @@ int main(){
     printf("Look for the operation you want to perform and input the appropriate character\n");
     printf("Input (A) for Add: \n");
     printf("Input (E) for Even or Odd: \n");
+    printf("Input (L) for Natural Logarithm: \n");
 
     scanf("%s", &operator);
 
@@ -51,11 +66,17 @@ int main(){
             evenodd();
             break;
             
+         case 'L':
+            logint();
+            break;
+
+            
 
         // If input does not match any character
         default:
             printf("Error! operator is not correct\n");
     }
+    
 
     return 0;
 }
