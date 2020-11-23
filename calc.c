@@ -16,12 +16,28 @@ void add(){
     printf("The sum of %d and %d is %d\n", A, B, ans);
 }
 
+void evenodd() {
+    int A;
+    
+    printf("Enter a number: \n");
+    scanf("%d", &A);
+    
+    if (A % 2 == 0){
+        printf("Even\n");
+    }
+    else{
+        printf("Odd\n");
+    }
+    
+}
+
 int main(){
     
     char operator;
     
     printf("Look for the operation you want to perform and input the appropriate character\n");
     printf("Input (A) for Add: \n");
+    printf("Input (E) for Even or Odd: \n");
 
     scanf("%s", &operator);
 
@@ -31,8 +47,12 @@ int main(){
             add();
             break;
             
+        case 'E':
+            evenodd();
+            break;
+            
 
-        // If input does not patch any character
+        // If input does not match any character
         default:
             printf("Error! operator is not correct\n");
     }
