@@ -45,6 +45,21 @@ void logint() {
 
 }
 
+void remainderint(){
+    int A, B, ans;
+    
+    printf("Enter first number\n");
+    scanf("%d", &A);
+    
+    printf("Enter second number\n");
+    scanf("%d", &B);
+    
+    ans = A % B;
+    
+    printf("When A is divided by B the remainder is: %d", ans);
+    
+}
+
 int main(){
     
     char operator;
@@ -53,6 +68,7 @@ int main(){
     printf("Input (A) for Add: \n");
     printf("Input (E) for Even or Odd: \n");
     printf("Input (L) for Natural Logarithm: \n");
+    printf("Input (R) for Remainder: \n");
 
     scanf("%s", &operator);
 
@@ -69,8 +85,10 @@ int main(){
          case 'L':
             logint();
             break;
-
             
+         case 'R':
+            remainderint();
+            break;
 
         // If input does not match any character
         default:
