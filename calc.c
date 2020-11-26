@@ -60,6 +60,21 @@ void remainderint(){
     
 }
 
+void subtract(){
+    int A, B, ans;
+    
+    printf("Enter first number to subtract\n");
+    scanf("%d", &A);
+    
+    printf("Enter second number to subtract\n");
+    scanf("%d", &B);
+    
+    ans = A - B;
+    
+    printf("The difference between %d and %d is %d\n", A, B, ans);
+}
+
+
 int main(){
     
     char operator;
@@ -69,6 +84,7 @@ int main(){
     printf("Input (E) for Even or Odd: \n");
     printf("Input (L) for Natural Logarithm: \n");
     printf("Input (R) for Remainder: \n");
+    printf("Input (S) for Subtract: \n");
 
     scanf("%s", &operator);
 
@@ -89,6 +105,11 @@ int main(){
          case 'R':
             remainderint();
             break;
+            
+         case 'S':
+            subtract();
+            break;
+
 
         // If input does not match any character
         default:
