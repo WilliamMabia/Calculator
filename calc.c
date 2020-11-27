@@ -74,6 +74,29 @@ void subtract(){
     printf("The difference between %d and %d is %d\n", A, B, ans);
 }
 
+void roi(){
+    //How much profits you would make if you invested a particular amount
+    double amount, sharePrice, currentSharePrice, roi;
+    
+    printf("Enter amount planned on investing in (Entry Amount): \n");
+    scanf("%lf", &amount);
+    
+    printf("Enter stock price when you planned on investing\n");
+    scanf("%lf", &sharePrice);
+    
+    printf("Enter current stock price\n");
+    scanf("%lf", &currentSharePrice);
+    
+    
+    
+    //Formula for roi
+    roi = (amount * currentSharePrice)/sharePrice;
+    
+    printf("Your return on investment if you invested $%.2lf at $%.2lf is $%.2lf", amount, sharePrice, roi); 
+    
+    
+}
+
 
 int main(){
     
@@ -83,6 +106,7 @@ int main(){
     printf("Input (A) for Add: \n");
     printf("Input (E) for Even or Odd: \n");
     printf("Input (L) for Natural Logarithm: \n");
+    printf("Input (O) for Return on Investment: \n");
     printf("Input (R) for Remainder: \n");
     printf("Input (S) for Subtract: \n");
 
@@ -105,6 +129,11 @@ int main(){
          case 'R':
             remainderint();
             break;
+            
+         case 'O':
+            roi();
+            break;
+
             
          case 'S':
             subtract();
