@@ -121,23 +121,23 @@ void roi2(){
 }
 
 void roi(){
-    int operator;
+    int input;
     
     printf("Specify the type of return on investment you want to calculate from the options below");
     printf("How much profits you would make if you invested a particular amount");
     printf("How much profits you would make at a particular entry and exit");
-    printf("Input (1) for option 1: \n");
-    printf("Input (2) for option 2: \n");
+    printf("Input (A) for option 1: \n");
+    printf("Input (B) for option 2: \n");
 
-    scanf("%d", &operator);
+    scanf("%d", &input);
 
-    switch(operator)
+    switch(toupper(input))
     {
         case 'A':
             roi1();
             break;
             
-        case 'E':
+        case 'B':
             roi2();
             break; 
             
