@@ -74,7 +74,7 @@ void subtract(){
     printf("The difference between %d and %d is %d\n", A, B, ans);
 }
 
-void roi(){
+void roi1(){
     //How much profits you would make if you invested a particular amount
     double amount, sharePrice, currentSharePrice, roi;
     
@@ -94,6 +94,55 @@ void roi(){
     
     printf("Your return on investment if you invested $%.2lf at $%.2lf is $%.2lf", amount, sharePrice, roi); 
     
+    
+}
+
+void roi2(){
+    //How much profits you would make at a particular entry and exit
+    double amount, sharePrice, exit, roi;
+    
+    printf("Enter value of investment(Entry) $: \n");
+    scanf("%lf", &amount);
+    
+    printf("Enter current share price $: \n");
+    scanf("%lf", &sharePrice);
+    
+    printf("Enter projected exit price $: \n");
+    scanf("%lf", &exit);
+    
+    //Formula for roi
+    roi = (amount * exit)/sharePrice;
+    
+    printf("If you invest $%.2lf at $%.2lf and exited at $%.2lf"
+           , amount, sharePrice, exit);
+    
+    printf("Your return on investment is $%.2lf", roi);
+    
+}
+
+void roi(){
+    int operator;
+    
+    printf("Specify the type of return on investment you want to calculate from the options below");
+    printf("How much profits you would make if you invested a particular amount");
+    printf("How much profits you would make at a particular entry and exit");
+    printf("Input (1) for option 1: \n");
+    printf("Input (2) for option 2: \n");
+
+    scanf("%d", &operator);
+
+    switch(operator)
+    {
+        case 'A':
+            roi1();
+            break;
+            
+        case 'E':
+            roi2();
+            break; 
+            
+        default:
+            printf("Error! operator is not correct\n");
     
 }
 
